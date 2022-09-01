@@ -12,8 +12,8 @@ router.post(
       userName: Joi.string().min(5).max(50).required(),
       email: Joi.string().max(50).email().required(),
       password: Joi.string().max(1024).required(),
-      firstName: Joi.string().min(3).max(50),
-      lastName: Joi.string().min(3).max(50),
+      firstName: Joi.string().min(2).max(50),
+      lastName: Joi.string().min(2).max(50),
     }),
   }),
   asyncMiddleware(usersController.registerUsers)
