@@ -8,6 +8,7 @@
         "build": "babel ./src --out-dir ./build",
         "start": "env-cmd -f ./config/dev.env nodemon --exec babel-node src/index.js",
         "test": "env-cmd -f ./config/test.env jest --runInBand",
+        "test:coverage": "env-cmd -f ./config/test.env jest --coverage --runInBand",
         "lint": "eslint ./src",
         "prettier:check": "prettier --check .",
         "prettier:write": "prettier --write .",

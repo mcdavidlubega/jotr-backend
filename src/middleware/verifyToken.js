@@ -1,6 +1,5 @@
 import jwt from 'jsonwebtoken';
 
-// eslint-disable-next-line consistent-return, func-names
 export default function (req, res, next) {
   const token = req.header('x_auth-token');
   if (!token) return res.status(401).json({ message: 'Access denied' });

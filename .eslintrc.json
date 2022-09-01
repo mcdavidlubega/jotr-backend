@@ -5,6 +5,8 @@
     "rules": {
       "prettier/prettier": "error",
       "no-console":"off",
-      "no-underscore-dangle":"off"
+      "no-underscore-dangle":"off",
+      "func-names":"off",
+      "consistent-return":"off"
     }  
 }

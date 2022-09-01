@@ -1,4 +1,3 @@
-/* eslint-disable func-names */
 /* eslint-disable no-undef */
 import testBase from './index';
 import { createUsers, deleteUsers } from './testdata/userTestData';
