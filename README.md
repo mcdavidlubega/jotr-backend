@@ -1,4 +1,4 @@
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/) [![JOTR Backend](https://github.com/mcdavidlubega/jotr-backend/actions/workflows/jotr-backend.yml/badge.svg)](https://github.com/mcdavidlubega/jotr-backend/actions/workflows/jotr-backend.yml) [![Coverage Status](https://coveralls.io/repos/github/mcdavidlubega/jotr-backend/badge.svg?branch=main)](https://coveralls.io/github/mcdavidlubega/jotr-backend?branch=main)
 
 # Jotr Backend
 
