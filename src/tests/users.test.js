@@ -1,15 +1,22 @@
 /* eslint-disable no-undef */
+import mongoose from 'mongoose';
 import testBase from './index';
 import { createUsers, deleteUsers } from './testdata/userTestData';
 
 describe('User tests', () => {
+  beforeAll((done) => {
+    done();
+  });
   beforeEach(async function () {
     await createUsers();
   });
   afterEach(async function () {
     await deleteUsers();
   });
-
+  afterAll((done) => {
+    mongoose.connection.close();
+    done();
+  });
   it('should register a user if user provides a unique email', async () => {
     const res = await testBase.post('/users').send({
       userName: 'user9',
