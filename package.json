@@ -6,13 +6,19 @@
     "main": "src/index.js",
     "scripts": {
         "build": "babel ./src --out-dir ./build",
-        "start": "env-cmd -f ./config/dev.env nodemon --exec babel-node src/index.js",
-        "test": "env-cmd -f ./config/test.env jest --runInBand",
-        "test:coverage": "env-cmd -f ./config/test.env jest --coverage --runInBand",
+        "start": "node build/index.js",
+        "dev": "env-cmd -f ./config/dev.env nodemon --exec babel-node src/index.js",
+        "test": "env-cmd -f ./config/test.env jest --runInBand --coverage",
+        "dev:test": "env-cmd -f ./config/test.env jest --verbose --runInBand",
         "lint": "eslint ./src",
         "prettier:check": "prettier --check .",
         "prettier:write": "prettier --write .",
         "prepare": "husky install"
+    },
+    "jest": {
+        "testPathIgnorePatterns": [
+            "build/"
+        ]
     },
     "dependencies": {
         "bcrypt": "^5.0.1",
