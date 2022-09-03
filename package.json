@@ -18,7 +18,13 @@
     "jest": {
         "testPathIgnorePatterns": [
             "build/"
-        ]
+        ],
+        "collectCoverage": true,
+        "coverageThreshold": {
+            "global": {
+              "lines": 80
+            }
+          }
     },
     "dependencies": {
         "bcrypt": "^5.0.1",
