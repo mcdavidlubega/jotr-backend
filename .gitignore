@@ -1,5 +1,6 @@
 node_modules
 .env
 .vscode
-config
+config/test.env
+config/dev.env
 coverage
