@@ -35,7 +35,6 @@ and Express. This is meant to work with the front end Project found [here](https
 **Create a separate one for your tests.**
 
 ```bash
-  cd config
   touch test.env
 
 ```
@@ -137,7 +136,7 @@ You can find and edit the precommit script at
 #### Login user
 
 ```http
-  POST /api/v1/auth
+  POST /api/v1/auth/login
 ```
 
 | Parameter  | Type     | Description                 |

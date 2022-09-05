@@ -6,7 +6,7 @@ import asyncMiddleware from '../../middleware/async';
 const router = Router();
 
 router.post(
-  '/',
+  '/register',
   celebrate({
     [Segments.BODY]: Joi.object().keys({
       userName: Joi.string().min(5).max(50).required(),

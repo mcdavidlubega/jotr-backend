@@ -16,10 +16,15 @@
         "prepare": "husky install"
     },
     "jest": {
-        "testPathIgnorePatterns": [
-            "build/"
-        ],
-        "collectCoverage": true,
+        "testPathIgnorePatterns" : [
+            "build",
+            "src/database/database.js"
+          ],
+          "coveragePathIgnorePatterns": [
+            "build",
+            "src/database/database.js"
+          ],
+        "collectCoverage": false,
         "coverageThreshold": {
             "global": {
               "lines": 80

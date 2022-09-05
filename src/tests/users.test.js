@@ -17,8 +17,9 @@ describe('User tests', () => {
     mongoose.connection.close();
     done();
   });
+
   it('should register a user if user provides a unique email', async () => {
-    const res = await testBase.post('/users').send({
+    const res = await testBase.post('/users/register').send({
       userName: 'user9',
       email: 'user9@gmail.com',
       password: '12345678',
@@ -36,7 +37,7 @@ describe('User tests', () => {
   });
 
   it('it should not register the user if they dont provide a unique email', async () => {
-    const res = await testBase.post('/users').send({
+    const res = await testBase.post('/users/register').send({
       userName: 'user1',
       email: 'user1@gmail.com',
       password: '12345678',
