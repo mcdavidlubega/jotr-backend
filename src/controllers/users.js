@@ -34,16 +34,27 @@ class userController {
   static async getuserProfile(req, res) {
     const user = await User.findOne({ userName: req.params.username });
     if (!user) return res.status(400).json({ message: 'User not found' });
+
+    const {
+      userName,
+      email,
+      firstName,
+      lastName,
+      socialMedia,
+      tel,
+      bio,
+      website,
+    } = user;
     return res.status(200).json({
       _id: String(user._id),
-      userName: user.userName,
-      email: user.email,
-      firstName: user.firstName,
-      lastName: user.lastName,
-      socialMedia: user.socialMedia,
-      tel: user.tel,
-      bio: user.bio,
-      website: user.website,
+      userName,
+      email,
+      firstName,
+      lastName,
+      socialMedia,
+      tel,
+      bio,
+      website,
     });
   }
 
@@ -71,17 +82,27 @@ class userController {
       },
       { new: true }
     );
-
+    const {
+      _id: updatedId,
+      username: updatedUserName,
+      email: updatedEmail,
+      firstName: updatedFirstName,
+      lastName: updatedLastName,
+      socialMedia: updatedSocialMedia,
+      tel: updatedTel,
+      bio: updatedBio,
+      website: updatedWebsite,
+    } = updatedProfile;
     return res.status(200).json({
-      _id: updatedProfile._id,
-      userName: updatedProfile.userName,
-      email: updatedProfile.email,
-      firstName: updatedProfile.firstName,
-      lastName: updatedProfile.lastName,
-      socialMedia: updatedProfile.socialMedia,
-      tel: updatedProfile.tel,
-      bio: updatedProfile.bio,
-      website: updatedProfile.website,
+      _id: updatedId,
+      userName: updatedUserName,
+      email: updatedEmail,
+      firstName: updatedFirstName,
+      lastName: updatedLastName,
+      socialMedia: updatedSocialMedia,
+      tel: updatedTel,
+      bio: updatedBio,
+      website: updatedWebsite,
     });
   }
 }
